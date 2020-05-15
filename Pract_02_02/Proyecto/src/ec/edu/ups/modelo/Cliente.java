@@ -1,8 +1,9 @@
 package ec.edu.ups.modelo;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Cliente {
+public class Cliente implements Serializable{
 private int idCliente;
 private String nombre;
 private String apellido;
