@@ -7,6 +7,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Scanner;
 
+import ec.edu.ups.conexion.Conexion;
 import ec.edu.ups.controlador.Controlador;
 import ec.edu.ups.modelo.LibroDigital;
 import javafx.scene.transform.Scale;
@@ -25,32 +26,12 @@ public class Main {
 		Connection conexion =null;
 		Statement sentencia = null;
 		ResultSet result = null;
-		String url = "jdbc:mysql://localhost:3306/libros";
-		String user = "root";
-		String pass = "Phone5ss";
-		try {
-			Class.forName("com.mysql.cj.jdbc.Driver");
-			conexion = DriverManager.getConnection(url, user, pass);
-			sentencia = conexion.createStatement();
-		}catch (ClassNotFoundException e) {
-		System.out.println("imposible cargar el driver: " + e.getMessage());
-		}
-
-		try {
-			sentencia.executeUpdate("INSERT cliente (cli_cedula, cli_nombres, cli_apellidos,cli_correo) VALUES ('0151928979','Cris','Zhirzhan','cris@gmail.com')");
-
-		}catch(SQLException e){
-			System.out.println("Fallo ingreso datos: " + e.getMessage());
-		}
-		try {
-			result = sentencia.executeQuery("SELECT * FROM cliente");
-			while(result.next()) 
-				System.out.println("id:" + result.getLong("cli_id") +", nombre: " + result.getString("cli_nombres"));
-		}catch (SQLException e) {
-			System.out.println("Consulta fallida: "+e.getMessage());
-		}
-
 		
+		Conexion con = new Conexion();
+		
+		sentencia=con.conexionB();
+		
+		sentencia.executeUpdate("INSERT cliente (cli_cedula, cli_nombres, cli_apellidos,cli_correo) VALUES ('0151928908','Juan','Perez','juan@gmail.com')");
 
 	}
 
