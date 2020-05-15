@@ -12,10 +12,10 @@ public abstract class Libro {
 		return 0;
 	}
 	
-	public abstract double calcularPrecioNeto();
+
 	public abstract double calcularCostoComision();
 	public abstract double calcularCostoEnvio();
-	public abstract double debitoCredito();
+	public abstract double debitoCredito(double debitoCliente);
 	
 	public Libro() {
 		

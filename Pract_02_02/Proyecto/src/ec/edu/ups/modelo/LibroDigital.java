@@ -7,27 +7,22 @@ public class LibroDigital extends Libro {
 
 
 	@Override
-	public double calcularPrecioNeto() {
-		return idLibro;
-		
-	}
-
-	@Override
 	public double calcularCostoComision() {
-		return idLibro;
-		// TODO Auto-generated method stub
-		
+		return (getCosto()*5)/(100);
+		// TODO Auto-generated method stub	
 	}
 
 	@Override
 	public double calcularCostoEnvio() {
+		
 		return idLibro;
 		
 	}
 
 	@Override
-	public double debitoCredito() {
-		return idLibro;
+	public double debitoCredito(double debitoCliente) {
+		
+		return ((calcularCostoComision()+getCosto())-debitoCliente);
 		
 	}
 
@@ -55,6 +50,7 @@ public class LibroDigital extends Libro {
 		return "LibroDigital [idLibro=" + idLibro + "]";
 	}
 
+	
 	
 	
 }

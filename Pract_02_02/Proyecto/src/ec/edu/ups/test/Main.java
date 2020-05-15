@@ -31,8 +31,11 @@ public class Main {
 		
 		sentencia=con.conexionB();
 		
-		sentencia.executeUpdate("INSERT cliente (cli_cedula, cli_nombres, cli_apellidos,cli_correo) VALUES ('0151928908','Juan','Perez','juan@gmail.com')");
-
+		sentencia.executeUpdate("INSERT cliente (cli_cedula, cli_nombres, cli_apellidos,cli_correo,cli_credito) VALUES ('0151928908','Juan','Perez','juan@gmail.com', 90.21)");
+		
+		
+	
+	
 	}
 
 }

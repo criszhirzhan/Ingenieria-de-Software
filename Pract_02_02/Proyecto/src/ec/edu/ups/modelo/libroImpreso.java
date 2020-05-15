@@ -5,32 +5,26 @@ public class libroImpreso extends Libro{
 	private int stock;
 	
 
-	@Override
-	public double calcularPrecioNeto() {
-		return stock;
-		// TODO Auto-generated method stub
-		
-	}
 
 	@Override
 	public double calcularCostoComision() {
-		return stock;
+		return ((getCosto()+2)/(100));
 		
 	}
 
 	@Override
 	public double calcularCostoEnvio() {
 		// TODO Auto-generated method stub
-		return stock;
+		return 20.00;
 		
 	}
 
 	@Override
-	public double debitoCredito() {
+	public double debitoCredito(double debitoCliente) {
 		// TODO Auto-generated method stub
-		return stock;
-		
+		return ((calcularCostoComision()+calcularCostoEnvio())-debitoCliente);
 	}
+
 
 	
 
@@ -68,6 +62,8 @@ public class libroImpreso extends Libro{
 	public String toString() {
 		return "libroImpreso [idLibro=" + idLibro + ", stock=" + stock + "]";
 	}
+
+
 	
 	
 }
