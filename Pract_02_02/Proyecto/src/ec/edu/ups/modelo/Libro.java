@@ -2,6 +2,7 @@ package ec.edu.ups.modelo;
 
 public abstract class Libro {
 
+	
 	private String titulo;
 	private String autor;
 	private String edicion;
@@ -9,7 +10,7 @@ public abstract class Libro {
 	
 	
 	public  double  calcularPrecioTotal() {
-		return 0;
+		return  (this.calcularCostoComision()+this.calcularCostoEnvio())+this.costo;
 	}
 	
 

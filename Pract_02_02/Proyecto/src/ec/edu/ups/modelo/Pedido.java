@@ -1,14 +1,15 @@
 package ec.edu.ups.modelo;
 
+
 import java.util.Date;
 import java.util.List;
 
-public abstract class Pedido {
+public  class Pedido {
 	private int idPedido;
 	private int idCliente;
-	private Date fechaPedido;
-	private List libroDigital;
-	private List librosImpresos;
+	private String fechaPedido;
+	private List<LibroDigital> libroDigital;
+	private List<libroImpreso> librosImpresos;
 	
 	public Pedido() {
 		
@@ -23,8 +24,8 @@ public abstract class Pedido {
 	}
 
 	
-	public Pedido(int idPedido, int idCliente, Date fechaPedido, List libroDigital, List librosImpresos) {
-		super();
+	public Pedido(int idPedido, int idCliente, String fechaPedido, List<LibroDigital> libroDigital, List<libroImpreso> librosImpresos) {
+	
 		this.idPedido = idPedido;
 		this.idCliente = idCliente;
 		this.fechaPedido = fechaPedido;
@@ -49,27 +50,27 @@ public abstract class Pedido {
 		this.idCliente = idCliente;
 	}
 
-	public Date getFechaPedido() {
+	public String getFechaPedido() {
 		return fechaPedido;
 	}
 
-	public void setFechaPedido(Date fechaPedido) {
+	public void setFechaPedido(String fechaPedido) {
 		this.fechaPedido = fechaPedido;
 	}
 
-	public List getLibroDigital() {
+	public List<LibroDigital> getLibroDigital() {
 		return libroDigital;
 	}
 
-	public void setLibroDigital(List libroDigital) {
+	public void setLibroDigital(List<LibroDigital> libroDigital) {
 		this.libroDigital = libroDigital;
 	}
 
-	public List getLibrosImpresos() {
+	public List<libroImpreso> getLibrosImpresos() {
 		return librosImpresos;
 	}
 
-	public void setLibrosImpresos(List librosImpresos) {
+	public void setLibrosImpresos(List<libroImpreso> librosImpresos) {
 		this.librosImpresos = librosImpresos;
 	}
 

@@ -4,6 +4,7 @@ public class LibroDigital extends Libro {
 	
 	private int idLibro;
 
+	
 
 
 	@Override
@@ -15,21 +16,36 @@ public class LibroDigital extends Libro {
 	@Override
 	public double calcularCostoEnvio() {
 		
-		return idLibro;
+		return 0.0;
 		
 	}
 
 	@Override
 	public double debitoCredito(double debitoCliente) {
 		
-		return ((calcularCostoComision()+getCosto())-debitoCliente);
+		return ((debitoCliente-calcularCostoComision()+getCosto()));
 		
 	}
-
-	public  LibroDigital() {
-	// TODO Auto-generated constructor stub
-	}	
 	
+	
+	
+
+	
+	
+
+
+	
+	public LibroDigital() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public LibroDigital(int idLibro,  String titulo, String autor, String edicion, double costo) {
+		super(titulo, autor, edicion, costo);
+		// TODO Auto-generated constructor stub
+		this.idLibro=idLibro;
+	}
+
 	//Generamos  -----------------
 	public LibroDigital(int idLibro) {
 		super();

@@ -1,7 +1,7 @@
 package ec.edu.ups.modelo;
 
 public class libroImpreso extends Libro{
-	private String idLibro;
+	private int idLibro;
 	private int stock;
 	
 
@@ -24,9 +24,18 @@ public class libroImpreso extends Libro{
 		// TODO Auto-generated method stub
 		return ((calcularCostoComision()+calcularCostoEnvio())-debitoCliente);
 	}
+	
+	
 
 
 	
+
+	public libroImpreso(int idLibro, String titulo, String autor, String edicion, double costo, int stock) {
+		super(titulo, autor, edicion, costo);
+		// TODO Auto-generated constructor stub
+		this.idLibro= idLibro;
+		this.stock=stock;
+	}
 
 	// -------------------------------------------------------
 	 public libroImpreso() {
@@ -35,18 +44,18 @@ public class libroImpreso extends Libro{
 	
 	 
 	
-	public libroImpreso(String idLibro, int stock) {
+	public libroImpreso(int idLibro, int stock) {
 		super();
 		this.idLibro = idLibro;
 		this.stock = stock;
 	}
 	
 
-	public String getIdLibro() {
+	public int getIdLibro() {
 		return idLibro;
 	}
 
-	public void setIdLibro(String idLibro) {
+	public void setIdLibro(int idLibro) {
 		this.idLibro = idLibro;
 	}
 
