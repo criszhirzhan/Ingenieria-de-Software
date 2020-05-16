@@ -7,6 +7,10 @@ public class Carrito {
 	private int idCarrito;
 	private int idCliente;
 	private List<Pedido> pedidos;
+	private double costoFinal;
+	private double costoD;
+	private double costoI;
+	
 	
 	public  void agregarPedido(Pedido pedido) {
 	}
@@ -20,19 +24,19 @@ public class Carrito {
 			for(int indice1 = 0;indice1<pedidos.get(indice).getLibroDigital().size();indice1++)
 			{
 			    System.out.println("Nombre Libro: "+pedidos.get(indice).getLibroDigital().get(indice1).getTitulo() +"Cosoto Total: "+pedidos.get(indice).getLibroDigital().get(indice1).getCosto());
-			    
+			costoD =pedidos.get(indice).getLibroDigital().get(indice1).getCosto();
+		
 			}
 			System.out.println("Libros Impresos: ");
 			for(int indice2 = 0;indice2<pedidos.get(indice).getLibrosImpresos().size();indice2++)
 			{
 			    System.out.println("Nombre Libro: "+pedidos.get(indice).getLibrosImpresos().get(indice2).getTitulo() +"Cosoto Total: "+pedidos.get(indice).getLibrosImpresos().get(indice2).getCosto());
-			    
+			costoI =pedidos.get(indice).getLibrosImpresos().get(indice2).getCosto();
 			}
-		    
-		    
 		}
 		
-		
+		costoFinal= costoD+costoI;
+		System.out.println("Precio final a pagar :"+costoFinal);
 	}
 	
 	//--------------------------------------------------------

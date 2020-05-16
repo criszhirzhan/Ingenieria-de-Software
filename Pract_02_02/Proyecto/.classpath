@@ -2,6 +2,8 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="C:/Users/Cristian/Desktop/mysql-connector-java-8.0.20.jar"/>
+	<classpathentry kind="lib" path="Librerias/eclipselink.jar"/>
+	<classpathentry kind="lib" path="Librerias/jakarta.persistence_2.2.3.jar"/>
+	<classpathentry kind="lib" path="Librerias/mysql-connector-java-8.0.20.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
