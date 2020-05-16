@@ -139,14 +139,18 @@ public class Main {
 		List<Cliente> cli=new ArrayList<Cliente>();
 		cli.add(cliente);
 		cli.add(cliente1);
-				System.out.println("Cliente numero 1:" +cli.get(0));
+				System.out.println("Datos Cliente numero 1 :" +cli.get(0));
 		
 		//Lista Libros Adquiridos
 		carrito.listarPedido();
 		
+		System.out.println(" ");
+		System.out.println("--------------------------------------------------"
+				+ "-------------------------------------------------------------"
+				+ "----------------");
+		System.out.println(" ");
 		
-		
-		System.out.println("Cliente numero 2:" +cli.get(1));
+		System.out.println("Datos cliente numero 2 :" +cli.get(1));
 		//Lista Libros Adquiridos(pedido 2)
 		carrito1.listarPedido();
 				
